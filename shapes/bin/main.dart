@@ -1,6 +1,5 @@
 import 'package:shapes/circle.dart';
 import 'package:shapes/rectangle.dart';
-import 'package:shapes/shape.dart';
 import 'package:shapes/square.dart';
 import 'package:shapes/triangle.dart';
 
