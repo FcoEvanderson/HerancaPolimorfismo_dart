@@ -1,3 +1,4 @@
+import 'dart:math';
 import './shape.dart';
 
 class Triangle extends Shape{
@@ -12,17 +13,23 @@ class Triangle extends Shape{
     String? name,}
   ) : side2=side2 ?? side1, 
       side3 = side3 ?? (side2 ?? side1), 
-      super(name ?? "Triangle");
+      super(name ?? "Triangle") {
+        if((side1 + this.side2 < this.side3) || 
+           (side1 + this.side3 < this.side2) ||
+           (this.side2 + this.side3 < side1)) {
+            throw Exception("Invalid triangle");
+        }  
+      }
 
   @override
   double area(){
-    print("$this.area()");
-    return 0.0;
+    var s = perimeter() / 2.0;
+    var p = s*(s - side1)*(s - side2)*(s - side3);
+    return sqrt(p);
   }
   
   @override
   double perimeter() {
-    print("$this.perimeter()");
     return side1 + side2 + side3;
   }
 }

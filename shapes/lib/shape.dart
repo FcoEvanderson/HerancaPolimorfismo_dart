@@ -1,5 +1,5 @@
 
-class Shape{
+abstract class Shape{
   final String name;
 
   Shape(this.name);
@@ -7,13 +7,9 @@ class Shape{
   @override
   String toString() => "<$name>";
 
-  double area(){
-    print("$this.area()");
-    return 0.0;
-  }
+  double semiperimeter() => perimeter() / 2.0;
+
+  double area();
   
-  double perimeter() {
-    print("$this.perimeter()");
-    return 0.0;
-  }
+  double perimeter();
 }

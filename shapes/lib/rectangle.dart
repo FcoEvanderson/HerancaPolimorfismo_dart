@@ -7,13 +7,11 @@ class Rectangle extends Shape {
 
   @override
   double area(){
-    print("$this.area()");
     return width * heigth;
   }
   
   @override
   double perimeter() {
-    print("$this.perimeter()");
     return 2.0 * (width + heigth);
   }
 }

@@ -8,13 +8,11 @@ class Circle extends Shape{
 
   @override
   double area(){
-    print("$this.area()");
     return 3.1415927 * radius * radius;
   }
   
   @override
   double perimeter() {
-    print("$this.perimeter()");
     return 2.0 * 3.1415927 * radius;
   }
 }

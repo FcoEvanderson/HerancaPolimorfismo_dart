@@ -6,7 +6,6 @@ import 'package:shapes/triangle.dart';
 
 void main(){
   var shapes = [
-  Shape("Shape"),
   Circle(5),
   Rectangle(4,2, name: "Rectangle"),
   Square(5),
